@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Argumentative Vis</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="linechart.js"></script>
+    <script>
+      function showPopup() {
+        document.getElementById("myPopup").style.display = "block";
+      }
+  
+      function closePopup() {
+        document.getElementById("myPopup").style.display = "none";
+      }
+  
+      window.onload = function() {
+        showPopup();
+      };
+    </script>
+  <div class="popup" id="myPopup">
+    <div class="popup-content">
+      <h1>Prime Video Vs Hulu: Unveiling the Superior Streaming Service</h1>
+      <p>Imagine a world without video streaming services, especially during quarantine when we rely on them for our daily dose of movies, sitcoms, and new content. With over 2,000 streaming businesses and 4 key players in the industry, it's tough to decide which site is best for our leisure and entertainment. But fear not, we've got you covered with some interesting insights! Let's dive into the battle of the streaming giants - Prime Video vs Hulu. Brace yourself for some eye-opening revelations!</p>
+    <h3>Dataset Description</h3>
+    <p>The scraped <a href="https://www.kaggle.com/datasets/ruchi798/tv-shows-on-netflix-prime-video-hulu-and-disney" target="_blank" style="color: blue; text-decoration: none; animation: blink 1s infinite;">  Kaggle Dataset Link
+    </a> includes a detailed list of TV shows that are available on different streaming platforms. The inspiration behind this data could be to determine which streaming platform(s) a specific TV show can be found on, as well as categorizing TV shows based on target age group and the streaming application they are available on. Additionally, the data may also include information on the year of production for each TV show and the streaming platform where it can be streamed.</p>
+      <span class="popup-close" id="animateBtn" onclick="closePopup()">&times;</span>
+    </div>
+  </div>
+    <!-- <div class="invertedcursor"></div> -->
+    <p class="hwTitle">Homework #5 : Argumentative Visualisation <strong>(alaksh25@asu.edu) </strong>           => <strong></strong> <a href="https://www.kaggle.com/datasets/ruchi798/tv-shows-on-netflix-prime-video-hulu-and-disney" target="_blank" style="color: blue; text-decoration: none; animation: blink 1s infinite;"> </strong> 
+      Kaggle Dataset Link
+    </a></p>
+
+    <div class="header">
+      <h1>Prime Video Vs Hulu: Unveiling the Superior Streaming Service</h1>
+    </div>
+    <div class="container">
+      <div class="split prime">
+        <div class="centered">
+          <h2 class="titleOTT">Prime Video</h2>
+          <p>Trend of amount of content over the years</p>
+          <svg id="prime"></svg>
+          <p class="primeArgument">
+            The line chart above depicts the count of TV shows produced over the
+            years, categorized by the platform on which they are available.
+            Notably, <span class="highlightPrime">Prime Video</span> stands out with a significantly higher volume
+            of content compared to Hulu, boasting <span class="highlightPrime">1.58 times </span>more shows.
+            Furthermore, the TV shows on Prime Video also have a commendable
+            <mean class="highlightPrime">mean IMDb rating of 7.1</span>.
+          </p>
+
+      <div class="primeTechniques">
+        <h2> <span style="background-color: #0077c1; color : #fff">Rhetorical techniques used</span></h2>
+        <ul>
+          <li><strong>Omission:</strong> Excluded attributes such as ID, Row ID, and Title from the dataset as they are not relevant to the argument.</li>
+          <li><strong>Comparison:</strong> The left graph features multiple lines that vividly depict the contrast between the streaming platforms.</li>
+          <li><strong>Data provenance:</strong> Provided citations and links to the data sources, along with a detailed explanation of the methodology used for comparisons.</li>
+          <li><strong>Cultural codes:</strong> Employed colors that correspond to the respective brand colors to represent the different entities.</li>
+        </ul>
+        <p></p>
+      </div>
+        </div>
+      </div>
+
+      <div class="split hulu">
+        <div class="centered">
+          <h2 class="titleOTT">Hulu</h2>
+          <p>Trend of Diversity Index of content</p>
+          <svg id="hulu"></svg>
+          <p class="huluArgument">
+            When evaluating streaming services based on the diversity of films
+            available, metrics such as production year, age, IMDb ratings, and
+            Rotten Tomatoes ratings are crucial. Upon analyzing the results, it
+            is evident that <span class="highlightHulu">Hulu emerges as the winner</span> of the diversity contest,
+            despite having comparatively less content than Prime Video. Hulu's
+            content library exhibits <span class="highlightHulu">greater diversity </span>in terms of age groups
+            and TV show ratings, catering to a wider audience with varied
+            preferences.
+          </p>
+          <div class="huluTechniques">
+            <h2> <span style="background-color: rgb(28, 231, 131); color : #151515">Rhetorical techniques used</span></h2>
+            <ul>
+              <li><strong>Omission:</strong> Attributes such as ID, Row ID, and Title have been excluded from the dataset as they are not relevant to the argument.</li>
+              <li><strong>Comparison:</strong> The right graph depicts multiple bar charts that visually illustrate the comparison of diversity among various factors such as age, ratings, etc. in streaming platforms.</li>
+              <li><strong>Data provenance:</strong> The data sources have been cited and linked, and the methodology of comparisons has been explained.</li>
+              <li><strong>Cultural codes:</strong> Colors have been utilized to represent different entities, employing their respective brand colors for visual clarity.</li>
+    </ul>
+            <p></p>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="techniques"></div>
+    </div>
+  </body>
+</html>
